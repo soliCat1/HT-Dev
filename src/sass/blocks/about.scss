@@ -1,5 +1,5 @@
 .about {
-  padding: 50px 16px 50px 0;
+  padding: 50px 0;
 
   @include vp-700 {
     padding: 60px 20px;
@@ -38,9 +38,11 @@
 
 .about__content {
   margin-bottom: 28px;
+  padding: 0 15px;
 
   @include vp-700 {
     margin-bottom: 32px;
+    padding: 0;
   }
 
   @include vp-1020 {
@@ -50,28 +52,38 @@
 
 .about__title {
   font-family: "Lato";
-  font-size: 6px;
-  line-height: 6px;
+  font-size: 8px;
+  line-height: 8px;
+  letter-spacing: 0.5px;
   color: #0a3b93;
   margin-bottom: 28px;
   text-transform: uppercase;
+
+  @include vp-700 {
+    margin-bottom: 20px;
+  }
 
   @include vp-1020 {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 32px;
+    letter-spacing: normal;
   }
 }
 
 .about__years {
   display: block;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 42px;
+  line-height: 38px;
   color: #8a7b60;
   margin-bottom: 16px;
 
+  @include vp-700 {
+    margin-bottom: 5px;
+  }
+
   @include vp-1020 {
-    font-size: 66px;
+    font-size: 88px;
     line-height: 66px;
     margin-bottom: 20px;
   }
@@ -89,11 +101,12 @@
 }
 
 .about__description + .about__description{
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .about__video {
-  width: 274px;
+  width: 290px;
+  padding-right: 15px;
   height: 194px;
   display: flex;
   position: relative;
@@ -102,6 +115,7 @@
   @include vp-700 {
     width: 570px;
     height: 403px;
+    padding-right: 0;
   }
 
   @include vp-1020 {

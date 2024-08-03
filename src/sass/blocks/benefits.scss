@@ -1,13 +1,35 @@
 .benefits {
   padding: 20px 15px 83px 15px;
   background-color: #f7eee5;
+  background-image: url('../images/svg/benefits-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+
+  @include vp-700 {
+    background-image: url('../images/svg/benefits-background-tablet.svg');
+  }
 
   @include vp-1020 {
-    padding: 80px 40px 120px 40px;
+    background-image: url('../images/svg/benefits-background-desktop-left.svg');
+    background-position: left 0 bottom 307px;
+    padding: 0 40px 120px 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 260px;
+      height: 416px;
+      background-image: url('../images/svg/benefits-background-desktop-right.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   @include vp-1340 {
-    padding: 125px 60px 120px 60px;
+    padding: 0 60px 120px 60px;
   }
 }
 
@@ -16,6 +38,7 @@
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 16px;
+  text-transform: uppercase;
 
   @include vp-1020 {
     font-size: 40px;
@@ -41,6 +64,9 @@
   color: #6c5f4a;
   margin-bottom: 8px;
 
+  @include vp-700 {
+    margin-bottom: 48px;
+  }
   
   @include vp-1020 {
     font-size: 18px;
@@ -66,6 +92,10 @@
   color: #ffffff;
   font-size: 18px;
   line-height: 22px;
+
+  @include vp-1020 {
+    padding: 16px 32px;
+  }
 }
 
 .benefits__item {
@@ -74,7 +104,7 @@
 
 .benefits__item--small {
   @include vp-1020 {
-    width: 240px;
+    width: 294px;
   }
 }
 
@@ -90,6 +120,16 @@
 
 .benefits__item--big .benefits__description {
   background-color: #8a7b60;
+
+  @include vp-1020 {
+    text-align: end;
+  }
+}
+
+.benefits__item--big:nth-child(4) .benefits__description {
+  @include vp-1020 {
+    text-align: start;
+  }
 }
 
 .benefits__item--count-mod {
@@ -104,6 +144,11 @@
   margin-bottom: 32px;
   display: block;
   color: #ffffff;
+
+  @include vp-1020 {
+    font-size: 100px;
+    margin-bottom: 16px;
+  }
 }
 
 .benefits__item--count-mod .benefits__description {
