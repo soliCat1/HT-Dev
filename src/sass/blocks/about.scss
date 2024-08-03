@@ -1,0 +1,164 @@
+.about {
+  padding: 50px 16px 50px 0;
+
+  @include vp-700 {
+    padding: 60px 20px;
+  }
+
+  @include vp-1020 {
+    padding: 80px 41px 80px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 26px;
+    position: relative;
+  }
+
+  @include vp-1340 {
+    padding: 100px 57px 100px 25px;
+    gap: 40px;
+    position: static;
+  }
+}
+
+.about::before {
+  @include vp-1020 {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f7eee5;
+    width: 100%;
+    height: 18px;
+  }
+
+  @include vp-1340 {
+    display: none;
+  }
+}
+
+.about__content {
+  margin-bottom: 28px;
+
+  @include vp-700 {
+    margin-bottom: 32px;
+  }
+
+  @include vp-1020 {
+    margin-bottom: 0;
+  }
+}
+
+.about__title {
+  font-family: "Lato";
+  font-size: 6px;
+  line-height: 6px;
+  color: #0a3b93;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+
+  @include vp-1020 {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 32px;
+  }
+}
+
+.about__years {
+  display: block;
+  font-size: 32px;
+  line-height: 32px;
+  color: #8a7b60;
+  margin-bottom: 16px;
+
+  @include vp-1020 {
+    font-size: 66px;
+    line-height: 66px;
+    margin-bottom: 20px;
+  }
+}
+
+.about__description {
+  font-size: 14px;
+  line-height: 20px;
+  color: #6c5f4a;
+
+  @include vp-1020 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.about__description + .about__description{
+  margin-top: 16px;
+}
+
+.about__video {
+  width: 274px;
+  height: 194px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+
+  @include vp-700 {
+    width: 570px;
+    height: 403px;
+  }
+
+  @include vp-1020 {
+    flex-shrink: 0;
+    width: 446px;
+    height: 298px;
+    margin: 33px 0 0 0;
+  }
+
+  @include vp-1340 {
+    width: 580px;
+    height: 402px;
+    margin: 0;
+  }
+}
+
+.about__video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f7eee5;
+  width: 250px;
+  height: 184px;
+  z-index: -1;
+
+  @include vp-700 {
+    width: 520px;
+    height: 382px;
+  }
+
+  @include vp-1020 {
+    width: 405px;
+    height: 272px;
+  }
+  
+  @include vp-1340 {
+    width: 545px;
+    height: 367px;
+  }
+}
+
+.about__video iframe {
+  margin: auto 0 0 auto;
+  
+  @include vp-700 {
+    width: 540px;
+    height: 361px;
+  }
+
+  @include vp-1020 {
+    width: 405px;
+    height: 271px;
+  }
+
+  @include vp-1340 {
+    width: 545px;
+    height: 365px;
+  }
+}

@@ -1,0 +1,64 @@
+.intro {
+  background: url('../images/content/intro.webp') center/cover no-repeat;
+  padding: 0 32px 149px 32px;
+
+  @include vp-700 {
+    padding: 0 144px 95px 144px;
+  }
+
+  @include vp-1020 {
+    padding: 0 340px 181px 40px;
+  }
+
+  @include vp-1340 {
+    padding: 0 640px 213px 60px;
+    background: url('../images/svg/intro-background.svg') bottom -98px right 0 no-repeat,
+    url('../images/content/intro.webp') center/cover no-repeat;
+  }
+}
+
+.intro__logo {
+  width: 167px;
+  height: 64px;
+  display: block;
+  margin: 0 auto 54px auto;
+
+  @include vp-1020 {
+    width: 267px;
+    height: 103px;
+    margin: 0 auto 135px 20px;
+  }
+}
+
+.intro__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include vp-700 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @include vp-1020 {
+    font-size: 72px;
+    line-height: 80px;
+    text-align: start;
+    margin-bottom: 28px;
+  }
+}
+
+.intro__description {
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+
+  @include vp-1020 {
+    font-size: 26px;
+    line-height: 36px;
+    text-align: start;
+  }
+}

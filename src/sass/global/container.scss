@@ -1,10 +1,19 @@
 .container {
-  padding: 0 20px;
+  padding: 15px;
+  min-width: 320px;
   width: 100%;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
-    max-width: 738px;
-    padding: 0;
+  @include vp-700 {
+    padding: 15px 0;
+    width: 610px;
+  }
+
+  @include vp-1020 {
+    width: 930px;
+  }
+
+  @include vp-1340 {
+    width: 1250px;
   }
 }

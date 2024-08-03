@@ -1,0 +1,43 @@
+.slider {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.slider__button {
+  position: absolute;
+  bottom: 50%;
+  cursor: pointer;
+
+  &--next {
+    right: -14px;
+  }
+
+  &--prev {
+    left: -14px;
+    transform: rotateY(180deg);
+  }
+
+  @include vp-1020 {
+    display: none;
+  }
+}
+
+.slider__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  @include vp-1020 {
+    display: none;
+  }
+}
+
+.slider__pagination .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+
+  &-active {
+    background-color: #0A3B93;
+  }
+}

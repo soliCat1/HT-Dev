@@ -1,0 +1,49 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin vp-700 {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin vp-1020 {
+  @media (min-width: 1020px) {
+    @content;
+  }
+}
+
+@mixin vp-1340 {
+  @media (min-width: 1340px) {
+    @content;
+  }
+}
