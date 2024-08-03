@@ -162,7 +162,7 @@ ul {
 }
 
 .about {
-  padding: 50px 16px 50px 0;
+  padding: 50px 0;
 }
 @media (min-width: 700px) {
   .about {
@@ -205,10 +205,12 @@ ul {
 
 .about__content {
   margin-bottom: 28px;
+  padding: 0 15px;
 }
 @media (min-width: 700px) {
   .about__content {
     margin-bottom: 32px;
+    padding: 0;
   }
 }
 @media (min-width: 1020px) {
@@ -219,30 +221,42 @@ ul {
 
 .about__title {
   font-family: "Lato";
-  font-size: 6px;
-  line-height: 6px;
+  font-size: 8px;
+  line-height: 8px;
+  letter-spacing: 0.5px;
   color: #0a3b93;
   margin-bottom: 28px;
   text-transform: uppercase;
+}
+@media (min-width: 700px) {
+  .about__title {
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 1020px) {
   .about__title {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 32px;
+    letter-spacing: normal;
   }
 }
 
 .about__years {
   display: block;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 42px;
+  line-height: 38px;
   color: #8a7b60;
   margin-bottom: 16px;
 }
+@media (min-width: 700px) {
+  .about__years {
+    margin-bottom: 5px;
+  }
+}
 @media (min-width: 1020px) {
   .about__years {
-    font-size: 66px;
+    font-size: 88px;
     line-height: 66px;
     margin-bottom: 20px;
   }
@@ -261,11 +275,12 @@ ul {
 }
 
 .about__description + .about__description {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 
 .about__video {
-  width: 274px;
+  width: 290px;
+  padding-right: 15px;
   height: 194px;
   display: flex;
   position: relative;
@@ -275,6 +290,7 @@ ul {
   .about__video {
     width: 570px;
     height: 403px;
+    padding-right: 0;
   }
 }
 @media (min-width: 1020px) {
@@ -351,17 +367,16 @@ ul {
   display: flex;
   gap: 7px;
   align-items: start;
-  background-image: url("../images/svg/mission-background.svg");
+  background-image: url("../images/svg/banner-background-mobile.svg");
   background-repeat: no-repeat;
   background-position: bottom 0 right 0;
-  background-size: 124px 66px;
 }
 @media (min-width: 700px) {
   .mission__banner {
     padding: 32px 90px 32px 20px;
     gap: 27px;
     align-items: center;
-    background-size: 179px 97px;
+    background-image: url("../images/svg/banner-background-tablet.svg");
   }
 }
 @media (min-width: 1020px) {
@@ -369,7 +384,6 @@ ul {
     padding: 94px 130px 94px 40px;
     gap: 38px;
     align-items: center;
-    background-size: 179px 97px;
     font-size: 24px;
     line-height: 32px;
   }
@@ -377,7 +391,7 @@ ul {
 @media (min-width: 1340px) {
   .mission__banner {
     padding: 94px 429px 94px 60px;
-    background-size: 437px 173px;
+    background-image: url("../images/svg/banner-background-desktop-big.svg");
   }
 }
 
@@ -493,11 +507,11 @@ ul {
   padding: 10px 20px;
   font-size: 18px;
   line-height: 28px;
+  text-align: center;
   display: block;
   cursor: pointer;
   margin: 0 auto;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 197px;
   transition: all 0.2s ease;
 }
 @media (hover: hover) {
@@ -513,8 +527,7 @@ ul {
 @media (min-width: 700px) {
   .mission__link {
     font-size: 14px;
-    text-align: center;
-    min-width: 171px;
+    width: 171px;
   }
 }
 @media (min-width: 1020px) {
@@ -522,7 +535,7 @@ ul {
     font-size: 18px;
     line-height: 28px;
     padding: 20px 40px;
-    min-width: 283px;
+    width: 283px;
   }
 }
 
@@ -550,7 +563,7 @@ ul {
   .advantages__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 35px 20px;
+    gap: 20px 35px;
   }
 }
 
@@ -594,6 +607,12 @@ ul {
 .advantages__description {
   font-size: 14px;
 }
+@media (min-width: 1020px) {
+  .advantages__description {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 
 .advantages__img {
   display: block;
@@ -611,7 +630,6 @@ ul {
   border: none;
   padding: 0;
   background-color: transparent;
-  font-size: 30px;
   color: #ffffff;
   transition: all 0.2s ease;
   z-index: 3;
@@ -696,15 +714,37 @@ ul {
 .benefits {
   padding: 20px 15px 83px 15px;
   background-color: #f7eee5;
+  background-image: url("../images/svg/benefits-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+}
+@media (min-width: 700px) {
+  .benefits {
+    background-image: url("../images/svg/benefits-background-tablet.svg");
+  }
 }
 @media (min-width: 1020px) {
   .benefits {
-    padding: 80px 40px 120px 40px;
+    background-image: url("../images/svg/benefits-background-desktop-left.svg");
+    background-position: left 0 bottom 307px;
+    padding: 0 40px 120px 40px;
+    position: relative;
+  }
+  .benefits::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 416px;
+    background-image: url("../images/svg/benefits-background-desktop-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 @media (min-width: 1340px) {
   .benefits {
-    padding: 125px 60px 120px 60px;
+    padding: 0 60px 120px 60px;
   }
 }
 
@@ -713,6 +753,7 @@ ul {
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 @media (min-width: 1020px) {
   .benefits__title {
@@ -739,6 +780,11 @@ ul {
 .benefits__paragraph {
   color: #6c5f4a;
   margin-bottom: 8px;
+}
+@media (min-width: 700px) {
+  .benefits__paragraph {
+    margin-bottom: 48px;
+  }
 }
 @media (min-width: 1020px) {
   .benefits__paragraph {
@@ -767,6 +813,11 @@ ul {
   font-size: 18px;
   line-height: 22px;
 }
+@media (min-width: 1020px) {
+  .benefits__description {
+    padding: 16px 32px;
+  }
+}
 
 .benefits__item {
   min-height: 294px;
@@ -774,7 +825,7 @@ ul {
 
 @media (min-width: 1020px) {
   .benefits__item--small {
-    width: 240px;
+    width: 294px;
   }
 }
 
@@ -791,6 +842,17 @@ ul {
 .benefits__item--big .benefits__description {
   background-color: #8a7b60;
 }
+@media (min-width: 1020px) {
+  .benefits__item--big .benefits__description {
+    text-align: end;
+  }
+}
+
+@media (min-width: 1020px) {
+  .benefits__item--big:nth-child(4) .benefits__description {
+    text-align: start;
+  }
+}
 
 .benefits__item--count-mod {
   background-color: #0a3b8e;
@@ -804,6 +866,12 @@ ul {
   margin-bottom: 32px;
   display: block;
   color: #ffffff;
+}
+@media (min-width: 1020px) {
+  .benefits__count {
+    font-size: 100px;
+    margin-bottom: 16px;
+  }
 }
 
 .benefits__item--count-mod .benefits__description {
